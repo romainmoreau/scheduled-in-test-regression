@@ -6,13 +6,13 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-@SpringBootTest
+@SpringJUnitConfig
 @EnableScheduling
-class DemoApplicationTests {
+class DemoApplicationTestsWithoutBoot {
 	private BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(1);
 
 	@Scheduled(initialDelay = 0, fixedRate = Long.MAX_VALUE)
